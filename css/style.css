@@ -1,0 +1,263 @@
+/* Font import */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,200,300,regular,500,600,700,800,900);
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  _background-color: #ccc;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  max-width: 450px;
+  position: relative;
+  _border: 1px solid #000;
+  overflow: hidden;
+}
+
+/* Search Section Style  */
+.search {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  z-index: 999;
+}
+
+.search .search_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eff5f5;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #eee;
+  border-radius: 1.5rem;
+  padding: 0 24px;
+  box-shadow: 0 0 4px #77777790;
+}
+
+.search .search_box .mic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search .search_box .mic > a > i {
+  font-size: 18px;
+  color: #afd5d2;
+}
+
+.search .search_box .search_engine {
+  display: flex;
+  align-items: center;
+}
+
+.search .search_box .search_engine button {
+  border: none;
+  background-color: #eff5f5;
+}
+
+.search .search_box .search_engine button > i {
+  margin-right: 8px;
+  font-size: 24px;
+  color: #497174;
+}
+
+.search .search_box .search_engine input {
+  width: 220px;
+  padding: 4px;
+  border: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  background-color: #eff5f5;
+  outline: none;
+}
+
+.search .search_box .search_engine input::placeholder {
+  color: #afd5d2;
+}
+
+/* Map Style  */
+#map {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+#map img {
+  width: 100%;
+}
+
+#map > div > div > div > div > div > div > div {
+  border-radius: 4px;
+  text-align: center;
+}
+
+#map h4 {
+  padding: 0.25rem 0.5rem;
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+}
+
+/* Detail Section Style  */
+.detail_box {
+  width: 100%;
+  height: 40%;
+  background: #eff5f5;
+  box-shadow: 0 -2px 4px #8d8d8d70;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  transition: all 0.25s cubic-bezier(1, 0.4, 0.39, 0.91);
+}
+
+.guide {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+  background: #eff5f5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 -6px 6px #8d8d8d4e;
+  z-index: 9999;
+}
+
+.guide i {
+  font-size: 24px;
+  color: #497174;
+  display: flex;
+  justify-content: center;
+}
+
+.detail_wrapper {
+  padding: 4px 20px;
+}
+
+.detail_title {
+  border-bottom: 1px solid #afd5d2;
+  margin-bottom: 12px;
+}
+
+.detail_title h2 {
+  font-size: 18px;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.detail_info {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #afd5d2;
+}
+
+.detail_info > div {
+  padding: 8px 15px;
+  _border: 1px solid #afd5d2;
+  width: 25%;
+  border-radius: 16px;
+  text-align: center;
+  background: #497174;
+}
+
+.detail_info > div > h3 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.detail_info > div > h3:first-child {
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.detail_info > div > h3:first-child ~ h3 {
+  color: #afd5d2;
+}
+
+.detail_info > div > h3:not(:last-child) {
+  border-bottom: 1px solid #afd5d2;
+}
+
+.detail_text {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.detail_text > div {
+  font-size: 12px;
+  display: flex;
+  margin-top: 16px;
+}
+
+.detail_text > div > div:first-child {
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 16px;
+  color: #222;
+}
+
+.detail_text > div > div > p {
+  padding-left: 20px;
+  color: #222;
+}
+
+.detail_text > div > div > p:first-child {
+  position: relative;
+}
+
+.detail_text > div > div > p:first-child::before {
+  content: '';
+  width: 1px;
+  height: 50%;
+  background: #afd5d2;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.detail_text > div > div:nth-child(1) {
+  width: 25%;
+}
+
+.detail_text > div > div:nth-child(1) > i {
+  margin-right: 8px;
+  color: #497174;
+}
+
+.detail_text > div > div:nth-child(2) {
+  width: 75%;
+  padding-left: 20px;
+}
